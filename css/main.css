@@ -1,0 +1,453 @@
+.logo {
+  width: 70px;
+  position: fixed;
+  top: 25px;
+  left: 25px;
+}
+
+.btn-menu {
+  position: fixed;
+  z-index: 3;
+  right: 35px;
+  top: 35px;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+  z-index: 11;
+}
+.btn-menu__line {
+  background: mediumseagreen;
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  transition: all 0.6s ease-in-out;
+}
+.btn-menu.close {
+  transform: rotate(180deg);
+}
+.btn-menu.close .btn-menu__line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+  width: 24px;
+  background: mediumseagreen;
+}
+.btn-menu.close .btn-menu__line:nth-child(2) {
+  opacity: 0;
+}
+.btn-menu.close .btn-menu__line:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+  width: 24px;
+  background: mediumseagreen;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  opacity: 0.9;
+  visibility: hidden;
+  z-index: 10;
+}
+.menu.show {
+  visibility: visible;
+}
+.menu__nav, .menu__branding {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  float: left;
+  width: 50%;
+  height: 100vh;
+  overflow: hidden;
+}
+.menu__nav {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  background: #262626;
+  list-style: none;
+  transform: translate3d(100%, 0, 0);
+  transition: all 0.6s ease-in-out;
+}
+.menu__nav.show {
+  transform: translate3d(0, 0, 0);
+}
+.menu__branding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  transform: translate3d(-100%, 0, 0);
+  transition: all 0.6s ease-in-out;
+}
+.menu__branding.show {
+  transform: translate3d(0, 0, 0);
+}
+.menu__branding .menu__logo {
+  width: 100%;
+}
+.menu hr {
+  width: 100%;
+}
+.menu .menu__item {
+  width: 100%;
+  transform: translate3d(600px, 0, 0);
+  transition: all 0.6s ease-in-out;
+}
+.menu .menu__item.show {
+  transform: translate3d(0, 0, 0);
+}
+.menu .menu__item .menu__link {
+  text-decoration: none;
+  color: mediumseagreen;
+  display: inline-block;
+  position: relative;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 300;
+  transition: all 0.6s ease-in-out;
+}
+.menu .menu__item:hover {
+  width: 50%;
+  background: #000;
+  transition-delay: unset;
+  transition: all 250ms ease-in-out;
+}
+
+.menu__item:nth-child(1) {
+  transition-delay: 0.05s;
+}
+
+.menu__item:nth-child(2) {
+  transition-delay: 0.1s;
+}
+
+.menu__item:nth-child(3) {
+  transition-delay: 0.15s;
+}
+
+.menu__item:nth-child(4) {
+  transition-delay: 0.2s;
+}
+
+.menu__item:nth-child(5) {
+  transition-delay: 0.25s;
+}
+
+.menu__item:nth-child(6) {
+  transition-delay: 0.3s;
+}
+
+.menu__item:nth-child(7) {
+  transition-delay: 0.35s;
+}
+
+@media (max-width: 1024px) {
+  .logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
+
+  .btn-menu {
+    position: absolute;
+  }
+}
+@media (max-width: 500px) {
+  .menu__nav {
+    width: 100%;
+    height: 70vh;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  .menu__branding {
+    width: 100%;
+    height: 30vh;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  .menu .menu__item {
+    transform: translate3d(0, 600px, 0);
+  }
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+section {
+  padding: 7rem 0;
+}
+
+.container {
+  width: 85%;
+  margin: 0 auto;
+  max-width: 65em;
+}
+
+.spacing > * + * {
+  margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--clr-text, #fff);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.125em;
+  padding: 0.5em 1.25em;
+  background: var(--clr-accent, blue);
+  border-radius: 0.25em;
+  transition: transform 300ms ease-in-out, opacity 300ms linear;
+}
+
+.btn:hover,
+.btn:focus {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.hero {
+  color: #fff;
+  text-align: center;
+  padding: 15em 0;
+}
+.hero #scroll {
+  border: none;
+  outline: none;
+}
+@supports (background-blend-mode: multiply) {
+  .hero {
+    background: url(../img/nike2.png), radial-gradient(#444, #111);
+    background-blend-mode: multiply;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+.hero .hero__title {
+  font-size: 4rem;
+  font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+  line-height: 1;
+  text-transform: uppercase;
+}
+@media (max-width: 500px) {
+  .hero {
+    padding: 140px 0 300px;
+  }
+}
+
+.featured {
+  background: #eee;
+}
+.featured .section-title {
+  text-align: center;
+  font-size: clamp(2.5rem, calc(5vw +1rem), 4rem);
+  line-height: 1;
+  color: #17353d;
+  margin-bottom: 5rem;
+}
+.featured__item {
+  display: block;
+  position: relative;
+  transform: scale(0.85);
+  transition: transform 250ms ease-in-out;
+  text-decoration: none;
+  color: #333;
+  text-align: center;
+  line-height: 1.2;
+}
+.featured__item:hover, .featured__item:focus {
+  transform: scale(1);
+  transform: rotate(-10deg);
+}
+.featured__item:hover .featured__details, .featured__item:focus .featured__details {
+  opacity: 1;
+}
+.featured__item::after {
+  content: "";
+  position: absolute;
+  padding: 75% 75% 0 0;
+  top: -4%;
+  left: 12%;
+  border-radius: 50%;
+  background: #2193b0;
+  z-index: -1;
+}
+.featured__details {
+  opacity: 0;
+  transition: opacity 250ms linear;
+}
+.featured__details span {
+  display: block;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+}
+.split > * {
+  flex-basis: 30%;
+  min-width: 15em;
+}
+
+.product {
+  background: firebrick;
+  padding: 3em 0;
+  border-radius: 1em;
+  margin-bottom: 5em;
+  text-align: center;
+}
+.product__title {
+  font-size: clamp(3rem, calc(5vw + 1em), 5.5rem);
+  color: #fff;
+  text-shadow: 0 0 0.2em black;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.product__img {
+  margin: -5em 0 0 0;
+}
+@media (min-width: 45em) {
+  .product {
+    text-align: left;
+    padding: 3em;
+    margin-bottom: 9em;
+  }
+  .product__title {
+    margin: 0;
+  }
+  .product__img {
+    float: right;
+    width: 65%;
+    shape-outside: url(../img/nike5.png);
+    shape-margin: 1em;
+    margin: 0 -5em 0 0;
+  }
+  .product.shoe-left .product__img {
+    shape-outside: url(../img/nike6.png);
+    float: left;
+    margin: 0 0 20px -5em;
+    shape-margin: 2em;
+  }
+  .product .card-3 .product__img {
+    shape-outside: url(../img/nike2.2.png);
+  }
+}
+
+.hero {
+  --clr-accent: #ff840f;
+}
+
+.card-1 {
+  background: #ff840f;
+  --clr-accent: #2193b0;
+}
+
+.card-2 {
+  background: #2193b0;
+  --clr-accent: #755139;
+}
+
+.card-3 {
+  background: sandybrown;
+  --clr-accent: #f96714;
+}
+
+.footer {
+  display: flex;
+  width: 100%;
+  padding: 2rem 0;
+  background: #ececec;
+  align-items: center;
+  margin: auto;
+}
+.footer input[type=checkbox] {
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  -webkit-appearance: none;
+  box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.5), 3px 3px 5px rgba(70, 70, 70, 0.12);
+  position: absolute;
+  border-radius: 50%;
+  border: 3px solid #ececec;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  left: 3%;
+}
+.footer input[type=checkbox]::before {
+  color: #7a7a7a;
+  font-size: 16px;
+}
+.footer input[type=checkbox]:checked {
+  box-shadow: -3px -3px 5px rgba(255, 255, 255, 0.5), 3px 3px 5px rgba(70, 70, 70, 0.12), inset -3px -3px 5px rgba(255, 255, 255, 0.5), inset 3px 3px 5px rgba(70, 70, 70, 0.12);
+}
+.footer input[type=checkbox]:checked::before {
+  color: #15e38a;
+}
+.footer .footer__items {
+  display: flex;
+}
+.footer .footer__items .footer__link {
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.footer .footer__items .footer__link i.fab {
+  font-size: 3rem;
+  color: darkslategray;
+}
+.footer .footer__items .git {
+  animation: rotate 7s linear forwards infinite;
+}
+@media (max-width: 550px) {
+  .footer .footer__items {
+    flex-direction: column;
+  }
+  .footer .footer__items .footer__link {
+    margin: 10px auto;
+  }
+  .footer .footer__items .git {
+    animation: none;
+  }
+  .footer input[type=checkbox] {
+    left: 10%;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

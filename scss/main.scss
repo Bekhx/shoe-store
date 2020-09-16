@@ -1,0 +1,317 @@
+@import 'menu';
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+section {
+    padding: 7rem 0;
+}
+
+.container {
+    width: 85%;
+    margin: 0 auto;
+    max-width: 65em;
+
+}
+
+.spacing>*+* {
+    margin-top: var(--spacer, 2rem);
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--clr-text, #fff);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.125em;
+    padding: .5em 1.25em;
+    background: var(--clr-accent, blue);
+    border-radius: 0.25em;
+    transition: transform 300ms ease-in-out,
+    opacity 300ms linear;    
+}
+.btn:hover,
+.btn:focus {
+    transform: scale(1.1);
+    opacity: .8;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero {
+    color: #fff;
+    text-align: center;
+    padding: 15em 0;
+
+    #scroll {
+        border: none;
+        outline: none;
+    }
+    
+    @supports(background-blend-mode: multiply) {
+        background:
+            url(../img/nike2.png),
+            radial-gradient(#444, #111);
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    
+    .hero__title {
+        font-size: 4rem;
+        font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+        line-height: 1;
+        text-transform: uppercase;
+    }
+    
+    @media(max-width: 500px) {
+        & {
+            padding: 140px 0 300px;
+        }
+    }
+}
+
+.featured {
+    background: #eee;
+
+    .section-title {
+        text-align: center;
+        font-size: clamp(2.5rem, calc(5vw +1rem), 4rem);
+        line-height: 1;
+        color: #17353d;
+        margin-bottom: 5rem;
+    }
+
+    &__item {
+        display: block;
+        position: relative;
+        transform: scale(0.85);
+        transition: transform 250ms ease-in-out;
+        text-decoration: none;
+        color: #333;
+        text-align: center;
+        line-height: 1.2;
+        
+        &:hover,
+        &:focus {
+            transform: scale(1);
+            transform: rotate(-10deg);
+
+            .featured__details {
+                opacity: 1;
+                //text-shadow: 0 0 2em rgba(#fff, 1);
+            }
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            padding: 75% 75% 0 0;
+            top: -4%;
+            left: 12%;
+            border-radius: 50%;
+            background: #2193b0;
+            z-index: -1;
+        }
+    }
+    
+    &__details {
+        opacity: 0;
+        transition: opacity 250ms linear;
+        
+        span {
+            display: block;
+            font-weight: 700;
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.split {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    justify-content: center;
+
+    &>* {
+        flex-basis: 30%;
+        min-width: 15em;
+    }
+}
+
+.product {
+    background: firebrick;
+    padding: 3em 0;
+    border-radius: 1em;
+    margin-bottom: 5em;
+    text-align: center;
+
+    &__title {
+        font-size: clamp(3rem, calc(5vw + 1em), 5.5rem);
+        color: #fff;
+        text-shadow: 0 0 .2em rgba($color: #000000, $alpha: 2.0);
+        line-height: 1;
+        text-transform: uppercase;
+    }
+
+    &__img {
+        margin: -5em 0 0 0;
+    }
+
+    @media(min-width: 45em) {
+        text-align: left;
+        padding: 3em;
+        margin-bottom: 9em;
+
+        &__title {
+            margin: 0;
+        }
+
+        &__img {
+            float: right;
+            width: 65%;
+            shape-outside: url(../img/nike5.png);
+            shape-margin: 1em;
+            margin: 0 -5em 0 0;
+        }
+
+        &.shoe-left {
+            .product__img {
+                shape-outside: url(../img/nike6.png);
+                float: left;
+                margin: 0 0 20px -5em;
+                shape-margin: 2em;
+            }
+        }
+        .card-3 {
+            .product__img {
+                shape-outside: url(../img/nike2.2.png);
+            }
+        }
+    }
+}
+
+.hero {
+    --clr-accent:  #ff840f;
+}
+
+.card-1 {
+    background: #ff840f;
+    --clr-accent: #2193b0;
+}
+.card-2 {
+    background: #2193b0;
+    --clr-accent: #755139;
+}
+.card-3 {
+    background: sandybrown;
+    --clr-accent: #f96714;
+}
+
+.footer {
+    display: flex;
+    width: 100%;
+    padding: 2rem 0;
+    background: #ececec;
+    align-items: center;
+    margin: auto;
+    
+    input[type='checkbox'] {
+        width: 50px;
+        height: 50px;
+        margin: 0;
+        -webkit-appearance: none;
+        box-shadow:
+        -3px -3px 5px rgba(255, 255, 255, 0.5),
+        3px 3px 5px rgba(70, 70, 70, 0.12);
+        position: absolute;
+        border-radius: 50%;
+        border: 3px solid #ececec;
+        outline: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        left: 3%;
+
+        &::before {
+            color: #7a7a7a;
+            font-size: 16px;
+        }
+
+        &:checked {
+            box-shadow:
+            -3px -3px 5px rgba(255, 255, 255, 0.5),
+            3px 3px 5px rgba(70, 70, 70, 0.12),
+            inset -3px -3px 5px rgba(255, 255, 255, 0.5),
+            inset 3px 3px 5px rgba(70, 70, 70, 0.12);
+        }
+        &:checked::before {
+            color: #15e38a;
+        }
+    }
+
+    .footer__items {
+        display: flex;
+        
+        .footer__link {
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+
+            i.fab {
+                font-size: 3rem;
+                color: darkslategray;
+            }
+        }
+         .git {
+            animation: rotate 7s linear forwards infinite;
+        }
+    }
+
+    @media(max-width: 550px) {
+        .footer__items {
+            flex-direction: column;
+
+            .footer__link {
+                margin: 10px auto;
+            }
+            .git {
+                animation: none;
+            }
+        }
+        input[type='checkbox'] {
+            left: 10%;
+        }
+    }
+}

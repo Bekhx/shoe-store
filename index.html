@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Shoes Inc.</title>
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="logo">
+            <a href="/">
+                <img src="img/logo.png" alt="">
+            </a>
+        </div>
+        <div class="btn-menu">
+            <div class="btn-menu__line"></div>
+            <div class="btn-menu__line"></div>
+            <div class="btn-menu__line"></div>
+        </div>
+        <nav class="menu">
+            <div class="menu__branding">
+                <img class="menu__logo" src="../img/nikeAir-logo.png" alt="">
+            </div>
+            <ul class="menu__nav">
+                <li class="menu__item">
+                    <a href="index.html" class="menu__link">
+                        Home
+                    </a>
+                </li>
+                <hr class="menu__item">
+                <li class="menu__item">
+                    <a href="about.html" class="menu__link">
+                        About
+                    </a>
+                </li>
+                <hr class="menu__item">
+                <li class="menu__item">
+                    <a href="news.html" class="menu__link">
+                        Nike News
+                    </a>
+                </li>
+                <hr class="menu__item">
+                <li class="menu__item">
+                    <a href="news.html" class="menu__link">
+                        Feedback
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <div class="container spacing">
+            <h1 class="hero__title">Amazing shoes at an amazing price</h1>
+            <p>Here you will find the most popular and sold sneakers mainly from Nike and other top brands.</p>
+            <button class="btn" id='scroll'>See what we have</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="featured">
+            <div class="container">
+                <h2 class="section-title">Featured products</h2>
+                <div class="split">
+                    <a href="#" class="featured__item">
+                        <img class='featured__img' src="img/nike0.png" alt="">
+                        <p class="featured__details"><span class="price">75$</span>Nike Roshe One</p>
+                    </a>
+                    <a href="#" class="featured__item">
+                        <img class='featured__img' src="img/nike1.png" alt="">
+                        <p class="featured__details"><span class="price">99$</span>Comming soon...</p>
+                    </a>
+                    <a href="#" class="featured__item">
+                        <img class='featured__img' src="img/nike3.png" alt="">
+                        <p class="featured__details"><span class="price">99$</span>Comming soon...</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="products">
+            <div class="container">
+
+                <h2 class="section-title"></h2>
+
+                <article class="product card-1 spacing">
+                    <img class="product__img" src="img/nike5.png" alt="">
+                    <h3 class="product__title">nike airmax 90</h3>
+                    <p class="product__description">В несравненно легких, удобных и стильных кроссовках Nike Air Max 90 сохранены легендарная вафельная подошва оригинальной модели, а также прошитые накладки и классические акценты из материала TPU. Свежие цвета создают современный образ, а амортизация Max Air обеспечивает комфорт во время движения.</p>
+                    <a href="#" class="btn">Buy now</a>
+                </article>
+
+                <article class="product card-2 shoe-left spacing">
+                    <img class="product__img" src="img/nike6.png" alt="">
+                    <h3 class="product__title">Nike Air Max 270</h3>
+                    <p class="product__description">Кроссовки Nike Air Max 270 — первая повседневная модель Nike Air Max со стильной и удобной увеличенной воздушной вставкой. Конструкция, дизайн которой вдохновлен легендарными моделями Air Max, акцентирует внимание на инновационной технологии Nike благодаря большому прозрачному «окну» и свежей расцветке.</p>
+                    <a href="#" class="btn">Buy now</a>
+                </article>
+
+                <article class="product card-3 spacing">
+                    <img class="product__img" src="img/nike2.2.png" alt="">
+                    <h3 class="product__title">Air Jordan 1 Mid SE</h3>
+                    <p class="product__description">Кроссовки Air Jordan 1 Mid SE с дизайном оригинальной модели AJ1 выполнены в свежей расцветке. Легкая вставка Air-Sole и сочетание натуральных и синтетических материалов создают классический образ.</p>
+                    <a href="#" class="btn">Buy now</a>
+                </article>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class='footer'>
+        <input class="fas fa-power-off" type="checkbox" name="" id="page-color">
+        <audio class='sound-2' src="mp3/2.mp3"></audio>
+        <audio class='sound-3' src="mp3/3.mp3"></audio>
+        <div class="container footer__items">
+            <a class='footer__link' href="#" target='_blank'>
+                <i class="fab fa-facebook"></i>
+            </a>
+            <a class='footer__link' href="#" target='_blank'>
+                <i class="fab fa-telegram"></i>
+            </a>
+            <a class='footer__link git' href="#" target='_blank'>
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

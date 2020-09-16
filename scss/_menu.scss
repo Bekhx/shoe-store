@@ -1,0 +1,186 @@
+@mixin easeOut {
+    transition: all .6s ease-in-out;
+}
+
+.logo {
+    width: 70px;
+    position: fixed;
+    top: 25px;
+    left: 25px;
+}
+
+.btn-menu {
+    position: fixed;
+    z-index: 3;
+    right: 35px;
+    top: 35px;
+    cursor: pointer;
+    @include easeOut();
+    z-index: 11;
+
+    &__line {
+        background: mediumseagreen;
+        width: 28px;
+        height: 3px;
+        margin: 0 0 5px 0;
+        @include easeOut;
+    }
+
+    //Rotate Into X Width Menu Lines
+    &.close {
+        transform: rotate(180deg);
+
+        .btn-menu__line {
+            //Line 1 - Rotate
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+                width: 24px;
+                background: mediumseagreen;
+            }
+            //Line 2 - Hide
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            //Line 3 - Rotate
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -6px);
+                width: 24px;
+                background: mediumseagreen;
+            }
+        }
+    }
+}
+
+
+.menu{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0.9;
+    visibility: hidden;
+    z-index: 10;
+
+    &.show {
+        visibility: visible;
+    }
+
+    &__nav,
+    &__branding {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+        justify-content: center;
+        float: left;
+        width: 50%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    &__nav {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        background: darken(#333, 5);
+        list-style: none;
+        transform: translate3d(100%, 0, 0);
+        @include easeOut;
+
+        &.show {
+            //Slide In From Right
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+    //Branding Side
+    &__branding {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        transform: translate3d(-100%, 0, 0);
+        @include easeOut;
+
+        &.show {
+            //Slide In From Left
+            transform: translate3d(0, 0, 0);
+        }
+
+        .menu__logo {
+            width: 100%;
+        }
+    }
+
+    hr {
+        width: 100%;
+    }
+
+    .menu__item{
+        width: 100%;
+        transform: translate3d(600px, 0, 0);
+        @include easeOut;
+        
+        &.show {
+            //Slide In From Right
+            transform: translate3d(0, 0, 0);
+        }
+        
+        .menu__link{
+            text-decoration: none;
+            color: mediumseagreen;
+            display: inline-block;
+            position: relative;
+            font-size: 30px;
+            text-transform: uppercase;
+            font-weight: 300;
+            @include easeOut;
+        }
+        
+        &:hover {
+            width: 50%;
+            background: #000;
+            transition-delay: unset;
+            transition: all 250ms ease-in-out;
+        }        
+    }
+}
+
+//Delay each nav item slide by 0.1s
+@for $x from 1 through 7 {
+    .menu__item:nth-child(#{$x}) {
+        transition-delay: $x * 0.05s;
+    }
+}
+
+@media(max-width: 1024px) {
+    .logo {
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+    .btn-menu {
+        position: absolute;
+    }
+}
+
+@media(max-width: 500px) {
+    .menu__nav {
+        width: 100%;
+        height: 70vh;
+        transform: translate3d(0, 100%, 0);
+    }
+
+    //Branding Side
+    .menu__branding {
+        width: 100%;
+        height: 30vh;
+        transform: translate3d(0, -100%, 0);
+    }
+
+    .menu .menu__item {
+        transform: translate3d(0, 600px, 0);
+    }
+}
+
+
+
