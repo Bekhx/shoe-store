@@ -1,5 +1,5 @@
 @import 'menu';
-
+@import 'modal';
 *,
 *::before,
 *::after {
@@ -39,9 +39,9 @@ section {
     margin-top: var(--spacer, 2rem);
 }
 
-.btn {
+.btn, .btn-hero {
     display: inline-block;
-    text-decoration: none;
+    border: none;
     color: var(--clr-text, #fff);
     font-weight: 700;
     text-transform: uppercase;
@@ -50,10 +50,13 @@ section {
     background: var(--clr-accent, blue);
     border-radius: 0.25em;
     transition: transform 300ms ease-in-out,
-    opacity 300ms linear;    
+    opacity 300ms linear;
+    outline: none;  
 }
 .btn:hover,
-.btn:focus {
+.btn:focus,
+.btn-hero:hover,
+.btn-hero:focus {
     transform: scale(1.1);
     opacity: .8;
 }
@@ -89,7 +92,7 @@ section {
     
     .hero__title {
         font-size: 4rem;
-        font-size: clamp(3rem, calc(5vw + 1rem), 4.5rem);
+        font-size: clamp(2rem, calc(5vw + 1rem), 4.5rem);
         line-height: 1;
         text-transform: uppercase;
     }
@@ -121,6 +124,7 @@ section {
         color: #333;
         text-align: center;
         line-height: 1.2;
+        z-index: 1;
         
         &:hover,
         &:focus {

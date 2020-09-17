@@ -14,6 +14,7 @@ const pageColorDark = document.querySelector('#page-color'),
     menuBranding = document.querySelector('.menu__branding');
 
 
+    //Menu settings
 let showMenu = false;
 
 function toggleMenu() {
@@ -37,12 +38,12 @@ function toggleMenu() {
         showMenu = false;
     }
 }
-
 menuBtn.addEventListener('click', toggleMenu);
 
 
-pageColorDark.addEventListener('change', () => {
-    
+    //Switch setting
+
+pageColorDark.addEventListener('click', () => {
     if(pageColorDark.checked) {
         sound2.play();
         featured.style.background = '#444';
@@ -68,6 +69,7 @@ pageColorDark.addEventListener('change', () => {
     }
 });
 
+//Smooth scroll settings
 function scrollTo(elem) {
     window.scroll({
         left: 0,
@@ -78,3 +80,4 @@ function scrollTo(elem) {
 buttonScroll.addEventListener('click', () => {
     scrollTo(featured);
 });
+
