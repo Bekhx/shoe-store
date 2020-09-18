@@ -13,7 +13,7 @@
 
         <div class="logo">
             <a href="index.html">
-                <img src="img/logo1.png" alt="">
+                <img class="logo__img" src="img/logo1.png" alt="">
             </a>
         </div>
 
@@ -66,18 +66,18 @@
             <div class="container">
                 <h2 class="section-title">Featured products</h2>
                 <div class="split">
-                    <a href="#" class="featured__item">
+                    <div href="#" class="featured__item">
                         <img class='featured__img' src="img/nike0.png" alt="">
                         <p class="featured__details"><span class="price">75$</span>Nike Roshe One</p>
-                    </a>
-                    <a href="#" class="featured__item">
+                    </div>
+                    <div href="#" class="featured__item">
                         <img class='featured__img' src="img/nike1.png" alt="">
                         <p class="featured__details"><span class="price">99$</span>Comming soon...</p>
-                    </a>
-                    <a href="#" class="featured__item">
+                    </div>
+                    <div href="#" class="featured__item">
                         <img class='featured__img' src="img/nike3.png" alt="">
                         <p class="featured__details"><span class="price">99$</span>Comming soon...</p>
-                    </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -91,21 +91,21 @@
                     <img class="product__img" src="img/nike5.png" alt="">
                     <h3 class="product__title">nike airmax 90</h3>
                     <p class="product__description">В несравненно легких, удобных и стильных кроссовках Nike Air Max 90 сохранены легендарная вафельная подошва оригинальной модели, а также прошитые накладки и классические акценты из материала TPU. Свежие цвета создают современный образ, а амортизация Max Air обеспечивает комфорт во время движения.</p>
-                    <button class="btn">Buy now</button>
+                    <button class="btn" id="btn-buy-1">Buy now</button>
                 </article>
 
                 <article class="product card-2 shoe-left spacing">
                     <img class="product__img" src="img/nike6.png" alt="">
                     <h3 class="product__title">Nike Air Max 270</h3>
                     <p class="product__description">Кроссовки Nike Air Max 270 — первая повседневная модель Nike Air Max со стильной и удобной увеличенной воздушной вставкой. Конструкция, дизайн которой вдохновлен легендарными моделями Air Max, акцентирует внимание на инновационной технологии Nike благодаря большому прозрачному «окну» и свежей расцветке.</p>
-                    <button class="btn">Buy now</button>
+                    <button class="btn" id="btn-buy-2">Buy now</button>
                 </article>
 
                 <article class="product card-3 spacing">
                     <img class="product__img" src="img/nike2.2.png" alt="">
                     <h3 class="product__title">Air Jordan 1 Mid SE</h3>
                     <p class="product__description">Кроссовки Air Jordan 1 Mid SE с дизайном оригинальной модели AJ1 выполнены в свежей расцветке. Легкая вставка Air-Sole и сочетание натуральных и синтетических материалов создают классический образ.</p>
-                    <button class="btn">Buy now</button>
+                    <button class="btn" id="btn-buy-3">Buy now</button>
                 </article>
 
             </div>
@@ -116,9 +116,14 @@
         <div class="modal-buy__body" id="buy-close-body">
             <div class="modal-buy__content">
                 <button class="btn-close-buy" id="buy-close"><i class="far fa-times-circle"></i></button>
-                <h1 class="modal-buy__title">Product №x</h1>
-                <p class="p-buy">Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt fuga necessitatibus repudiandae id, alias libero?</p>
-                <button class="add-cancel-btn cancel" id="buy-cancel">Cancel</button>
+                <div class="modal-items-flex">
+                    <div>
+                        <h1 class="modal-buy__title"></h1>
+                        <p class="p-buy"></p>
+                    </div>
+                    <img src="" alt="" id="img-buy">
+                </div>
+                <button class="add-cancel-btn buy">Buy</button>
                 <button class="add-cancel-btn add">
                     Add to <i class="fas fa-shopping-cart"></i>
                 </button>

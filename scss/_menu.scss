@@ -7,6 +7,10 @@
     position: fixed;
     top: 25px;
     left: 25px;
+    
+    &__img {
+        width: 100%;
+    }
 }
 
 .btn-menu {
@@ -155,8 +159,6 @@
 @media(max-width: 1024px) {
     .logo {
         position: absolute;
-        top: 25px;
-        left: 25px;
     }
     .btn-menu {
         position: absolute;
@@ -179,6 +181,15 @@
 
     .menu .menu__item {
         transform: translate3d(0, 600px, 0);
+    }
+
+    .logo {
+        top: 35px;
+        left: 25px;
+        
+        &__img {
+            width: 70%;
+        }
     }
 }
 
