@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In & Sign Up Form</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://kit.fontawesome.com/bdad5d5a21.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container-login">
+        <div class="logo">
+            <a href="index.html">
+                <img class="logo__img" src="img/logo1.png" alt="">
+            </a>
+        </div>
+        
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="" class="sign-in-form">
+                    <h2 class="title-in">Sign In</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <input type="submit" value="Login" class="btn-in solid">
+
+                    <p class="social-text">Or Sign In with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </form>
+                <!-- sign-in-form -->
+                <form action="" class="sign-up-form">
+                    <h2 class="title-in">Sign Up</h2>
+                    <div class="input-field">
+                        <i class="fas fa-user"></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-envelope"></i>
+                        <input type="text" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" placeholder="Confirm Password">
+                    </div>
+                    <input type="submit" value="Sign-up" class="btn-in solid">
+
+                    <p class="social-text">Or Sign Up with social platforms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </form>
+                <!-- sign-up-form -->
+            </div>
+            <!-- signin-signup -->
+        </div>
+        <!-- forms-container -->
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>Впервые здесь?</h3>
+                    <p>Зарегистрируйтесь и получите доступ к сервисам!</p>
+                    <button class="btn-in transparent" id="sign-up-btn">Sign up</button>
+                </div>
+
+                <img src="img/log.svg" alt="" class="image">
+            </div>
+            <!-- panel left-panel -->
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>One of us?</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi vitae sint minima.</p>
+                    <button class="btn-in transparent" id="sign-in-btn">Sign in</button>
+                </div>
+
+                <img src="img/register.svg" alt="" class="image">
+            </div>
+            <!-- panel right-panel -->
+        </div>
+        <!-- panels-container -->
+    </div>
+    <!-- container-login -->
+
+    <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,5 +1,9 @@
 @import 'menu';
 @import 'modal';
+@import 'news';
+@import 'about';
+@import 'login';
+
 *,
 *::before,
 *::after {
@@ -75,6 +79,23 @@ section {
     text-align: center;
     padding: 15em 0;
 
+    
+    .account {
+    position: absolute;
+    color: mediumseagreen;
+    width: 30px;
+    height: 30px;
+    top: 23px;
+    right: 95px;
+    font-size: 25px;
+    cursor: pointer;
+
+    .a-account {
+        color: mediumseagreen;
+        text-decoration: none;
+    }
+}
+
     #scroll {
         border: none;
         outline: none;
@@ -105,7 +126,7 @@ section {
 }
 
 .featured {
-    background: #eee;
+    background: eee;
 
     .section-title {
         text-align: center;
@@ -142,7 +163,7 @@ section {
             top: -4%;
             left: 12%;
             border-radius: 50%;
-            background: #2193b0;
+            background-image: linear-gradient(60deg, #3d3393 0%, #2b76b9 37%, #2cacd1 65%, #35eb93 100%);
             z-index: -1;
         }
     }
