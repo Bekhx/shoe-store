@@ -11,7 +11,9 @@ const pageColorDark = document.querySelector('#page-color'),
     menu = document.querySelector('.menu'),
     menuNav = document.querySelector('.menu__nav'),
     menuItems = document.querySelectorAll('.menu__item'),
-    menuBranding = document.querySelector('.menu__branding');
+    menuBranding = document.querySelector('.menu__branding'),
+    threImg = document.querySelector('.thre-img'),
+    sbTitle = document.querySelector('.sb-title');
 
 
     //Menu settings
@@ -48,6 +50,8 @@ pageColorDark.addEventListener('click', () => {
         sound2.play();
         featured.style.background = '#444';
         featuredTitle.style.color = '#fff';
+        threImg.style.background = '#222';
+        sbTitle.style.color = '#fff';
         featuredDetails.forEach(element => {
             element.style.color = '#fff';
         });
@@ -59,10 +63,12 @@ pageColorDark.addEventListener('click', () => {
         sound3.play();
         featured.style.background = '#eee';
         featuredTitle.style.color = '#17353d';
+        sbTitle.style.color = '#17353d';
+        threImg.style.background = '#f5f5f5';
         featuredDetails.forEach(element => {
             element.style.color = '#17353d';
         });
-        products.style.background = '#fff'
+        products.style.background = '#f5f5f5'
         links.forEach(item => {
             item.style.color = 'darkslategray';
         });
